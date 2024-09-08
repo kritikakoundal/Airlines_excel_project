@@ -1,66 +1,83 @@
 # Airlines_excel_project
-Case Study: Analyzing Airline Data for Operational Efficiency
-Background:
-You are a data analyst working for a major airline company, SkyHigh Airlines. The management has provided you with a dataset containing flight operations data for the past year. Your task is to analyze the data to identify patterns, trends, and areas for improvement in operational efficiency. The company is particularly interested in understanding flight delays, cancellations, and their impact on customer satisfaction.
+To execute this case study using Excel, follow these steps to analyze the airline data for operational efficiency:
 
-Dataset Overview:
-The dataset includes the following columns:
+### 1. *Data Cleaning*
+   - *Convert Date and Time Fields:*
+     - Ensure all date fields are in the correct format by selecting the column and choosing an appropriate date format from the Format Cells option.
+     - Convert time fields to the correct time format and ensure consistency (e.g., 24-hour format).
+   - *Handle Missing Data:*
+     - Use conditional formatting or filters to identify missing or inconsistent values.
+     - Decide whether to fill missing data (e.g., using averages, previous values) or exclude incomplete records.
 
-Flight Number: Unique identifier for each flight.
-Date: Date of the flight.
-Origin: Airport where the flight originated.
-Destination: Airport where the flight landed.
-Scheduled Departure Time: The scheduled time the flight was supposed to depart.
-Actual Departure Time: The actual time the flight departed.
-Scheduled Arrival Time: The scheduled time the flight was supposed to arrive.
-Actual Arrival Time: The actual time the flight arrived.
-Flight Duration: The time duration of the flight (in minutes).
-Delay (in minutes): The delay in departure or arrival, calculated as the difference between scheduled and actual times.
-Cancellation: A binary indicator (Yes/No) for whether the flight was canceled.
-Reason for Delay: The reason for delay (e.g., weather, technical issue, crew unavailability).
-Number of Passengers: The number of passengers on the flight.
-Customer Satisfaction Score: A score from 1 to 10 based on post-flight surveys.
-Objectives:
-Flight Delay Analysis:
+### 2. *Descriptive Statistics*
+   - *Calculate Basic Metrics:*
+     - Use Excel functions like AVERAGE(), MEDIAN(), and MODE.SNGL() to compute statistics for delay time, flight duration, number of passengers, and customer satisfaction scores.
+     - Create summary tables for each key metric.
+  
+### 3. *Flight Delay Analysis*
+   - *Average Delay Time:*
+     - Use AVERAGEIF() to calculate the average delay across all flights.
+   - *Delay-Prone Routes:*
+     - Create a pivot table with Origin-Destination pairs as rows and average delay as values.
+   - *Delay Reasons:*
+     - Use a pivot table to count the occurrences of each delay reason and calculate the average delay for each reason.
+  
+   *Visualizations:*
+   - *Bar Chart:* Insert a bar chart to show the frequency and average impact of each delay reason.
+   - *Heat Map:* Use conditional formatting on a pivot table to create a heat map showing delay trends by route and time of year.
 
-Identify the average delay time for flights.
-Determine which routes (Origin-Destination pairs) are most prone to delays.
-Analyze the most common reasons for delays and their average impact on delay time.
-Cancellation Analysis:
+### 4. *Cancellation Analysis*
+   - *Percentage of Flights Canceled:*
+     - Use COUNTIF() and COUNTA() to calculate the percentage of flights canceled.
+   - *Cancellation Trends:*
+     - Use a pivot table to analyze cancellations by route, month, or other factors.
+   - *Impact on Customer Satisfaction:*
+     - Compare average customer satisfaction scores for canceled vs. non-canceled flights using AVERAGEIF().
+  
+   *Visualizations:*
+   - *Line Chart:* Create a line chart to show the trend of cancellations over time.
+   - *Box Plot:* Use the Excel Add-in or create a manual box plot to compare customer satisfaction scores for canceled and non-canceled flights.
 
-Calculate the percentage of flights canceled.
-Identify trends in flight cancellations (e.g., specific routes, times of the year).
-Analyze the impact of cancellations on customer satisfaction.
-Passenger Load Analysis:
+### 5. *Passenger Load Analysis*
+   - *Average Number of Passengers:*
+     - Calculate the average number of passengers using AVERAGE().
+   - *Routes with Low Passenger Numbers:*
+     - Create a pivot table to identify routes with consistently low passenger loads.
+   - *Passenger Load vs. Delay:*
+     - Use a scatter plot to visualize the relationship between passenger load and delays.
+  
+### 6. *Customer Satisfaction Analysis*
+   - *Average Customer Satisfaction:*
+     - Use AVERAGE() to calculate the overall average customer satisfaction score.
+   - *Influencing Factors:*
+     - Create pivot tables and scatter plots to analyze how delays, cancellations, and other variables affect customer satisfaction.
+   - *Recommendations:*
+     - Summarize key findings in a separate sheet, highlighting areas for improvement based on the data.
 
-Determine the average number of passengers per flight.
-Identify routes with consistently low passenger numbers.
-Analyze the relationship between passenger load and flight delays.
-Customer Satisfaction Analysis:
+   *Visualizations:*
+   - *Box Plot:* Compare customer satisfaction across different flight conditions.
+   - *Correlation Matrix:* Use Excel's CORREL() function to create a correlation matrix for relevant variables.
 
-Analyze the average customer satisfaction score and identify key factors that influence it.
-Determine the impact of delays and cancellations on customer satisfaction.
-Provide recommendations for improving customer satisfaction based on the data.
-Step-by-Step Analysis:
-Data Cleaning:
+### 7. *Trend Analysis*
+   - *Time Series Analysis:*
+     - Use line charts to visualize trends in delays, cancellations, and passenger loads over the year. 
+     - If needed, use Excel’s trendline feature to identify seasonal patterns.
 
-Ensure that all date and time fields are in the correct format.
-Handle any missing or inconsistent data, especially in critical fields like delay reasons or customer satisfaction scores.
-Descriptive Statistics:
+### 8. *Dashboard Creation*
+   - *Interactive Dashboard:*
+     - Use Excel’s Pivot Table and Pivot Chart features to create an interactive dashboard.
+     - Include slicers for filtering by routes, time periods, delay reasons, etc.
+     - Design the dashboard with clear labels, dynamic charts, and a summary section for key metrics.
+     - Ensure the dashboard is user-friendly and allows management to explore the data dynamically.
 
-Calculate basic statistics (mean, median, mode) for key metrics like delay time, flight duration, number of passengers, and satisfaction scores.
-Visualizations:
+### 9. *Bonus Task: Predictive Analysis*
+   - *Predictive Modeling:*
+     - Although Excel’s predictive capabilities are limited, you can use the FORECAST.ETS() function to make simple predictions based on time series data.
+     - Provide insights and recommendations for proactive measures based on these forecasts.
 
-Bar Charts: Show the frequency of different delay reasons and their average delay times.
-Heat Maps: Display delay trends across different routes and times of the year.
-Box Plots: Compare the distribution of customer satisfaction scores across different flight conditions (on-time vs. delayed, canceled vs. completed).
-Correlation Analysis:
+### *Expected Deliverables:*
+- *Comprehensive Report:* Include key findings, visualizations, and recommendations. This can be in a separate sheet or as a summary within the dashboard.
+- *Interactive Dashboard:* Make it the main feature of your Excel workbook, allowing management to interact with and explore the data.
+- *Predictive Insights:* If included, present these as an additional feature within your report or dashboard.
 
-Use scatter plots and correlation coefficients to examine the relationship between delays/cancellations and customer satisfaction scores.
-Analyze the correlation between passenger load and flight delays.
-Trend Analysis:
-
-Perform a time series analysis to identify patterns in delays, cancellations, and passenger loads over the year.
-Dashboard Creation:
-
-Create an interactive Excel dashboard that allows the management to explore the data dynamically. Include filters for different routes, time periods, and other relevant factors.
+This approach will allow you to leverage Excel’s capabilities to thoroughly analyze the airline data, providing actionable insights and creating a tool that management can use to make informed decisions.
